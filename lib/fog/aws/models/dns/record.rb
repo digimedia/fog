@@ -25,7 +25,7 @@ module Fog
         end
 
         def destroy
-          requires :name, :ttl, :type, :value, :zone, :alias_target
+          requires :name, :ttl, :type, :zone
           options = {
             :action           => 'DELETE',
             :name             => name,
@@ -43,7 +43,7 @@ module Fog
         end
 
         def save
-          requires :name, :ttl, :type, :value, :zone, :alias_target
+          requires :name, :ttl, :type, :zone
           options = {
             :action           => 'CREATE',
             :name             => name,
